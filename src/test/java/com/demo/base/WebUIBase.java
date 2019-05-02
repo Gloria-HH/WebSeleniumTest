@@ -51,8 +51,9 @@ public abstract class WebUIBase {
 
         //构造webdriver
         if (curBrowser.equalsIgnoreCase("firefox")) {
-            System.setProperty("webdriver.firefox.bin", firefoxPath);
-            System.setProperty("javax.xml.parsers.DocumentBuilderFactory", "com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl");
+//            System.setProperty("webdriver.firefox.bin", firefoxPath);
+//            System.setProperty("javax.xml.parsers.DocumentBuilderFactory", "com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl");
+            System.setProperty("webdriver.gecko.driver", firefoxPath);
             driver = new FirefoxDriver();
         } else if (curBrowser.equalsIgnoreCase("chrome")) {
             System.setProperty("webdriver.chrome.driver", chromePath);
